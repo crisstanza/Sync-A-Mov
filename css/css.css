@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #FFFFFA;
+}
+
+.main-display {
+	border-radius: 3px;
+	border: 1px solid gray;
+	padding: 10px;
+	background-color: whitesmoke;
+	width: 480px;
+	height: 640px;
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	left: 50%;
+	text-align: center;
+}
+
+.main-display svg#board-display {
+	border-radius: 3px;
+	border: 1px dotted transparent;
+	background-color: transparent;
+}
