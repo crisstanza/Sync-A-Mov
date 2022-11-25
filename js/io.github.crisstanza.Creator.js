@@ -7,7 +7,7 @@ if (!io.github.crisstanza.Creator) io.github.crisstanza.Creator = {};
 
 (function() {
 
-	io.github.crisstanza.Creator.html = function(name, attributes, parent, innerHTML) {
+	io.github.crisstanza.Creator.html = function(name, attributes, parent, innerHTML, child) {
 		let element = name ? document.createElement(name) : document.createTextNode(innerHTML);
 		if (attributes) {
 			for (var key in attributes) {
@@ -17,8 +17,11 @@ if (!io.github.crisstanza.Creator) io.github.crisstanza.Creator = {};
 		if (parent) {
 			parent.appendChild(element);
 		}
-		if (innerHTML) {
+		if (innerHTML !== undefined) {
 			element.innerHTML = innerHTML;
+		}
+		if (child) {
+			element.appendChild(child);
 		}
 		return element;
 	};
@@ -33,7 +36,7 @@ if (!io.github.crisstanza.Creator) io.github.crisstanza.Creator = {};
 		if (parent) {
 			parent.appendChild(element);
 		}
-		if (innerHTML) {
+		if (innerHTML !== undefined) {
 			element.innerHTML = innerHTML;
 		}
 		return element;
